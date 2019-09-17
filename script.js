@@ -13,5 +13,5 @@ function changeEyeColour (){
   red += 5;
   
   eye[0].setAttribute = ('background-color', `rgb(${red}, ${green}, ${blue})`);
-  console.log(eye[0].setAttribute = ('background-color', `rgb(${red}, ${green}, ${blue})`))
+  console.log(eye[0]);
 }
