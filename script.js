@@ -3,11 +3,15 @@
 
 // prints "hi" in the browser's dev tools console
 
-const eyeColour = document.querySelector('.eye');
-console.log(eyeColour);
-
-const red = 0;
+const eye = document.querySelectorAll('.eye');
+console.log(eye[0], eye[1]);
+  let red = 0;
+  let green = 0;
+  let blue = 0;
 
 function changeEyeColour (){
-  eyeColour.setAttribute = ('background-color', `rgb(${red}, ${green}, ${blue}`)
+  red += 5;
+  
+  eye[0].setAttribute = ('background-color', `rgb(${red}, ${green}, ${blue})`);
+  console.log(eye[0].setAttribute = ('background-color', `rgb(${red}, ${green}, ${blue})`))
 }
