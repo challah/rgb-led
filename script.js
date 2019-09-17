@@ -14,3 +14,6 @@ function changeEyeColour (){
   eye[0].style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
   console.log(eye[0]);
 }
+
+const menu = document.querySelector('#menu');
+menu.innerHTML = '${N}: <button'
