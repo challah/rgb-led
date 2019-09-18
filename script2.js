@@ -18,7 +18,7 @@ function createButtons() {
   let tableRow = []
   const table = document.createElement('table');
     for (let i = 0; i < colours.length; i++) {
-        tableRow += `<tr><td><span id="${colours[i]}name">${colours[i].charAt(0).toUpperCase()}</span> </td><td><button class="${colours[i]} up">+</button></td><td><button class="${colours[i]} down">-</button></td><td><input type="range" min="0" max="255" value="0" class="slider" id="${colours[i]}-slider"></td></tr>`
+        tableRow += `<tr><td><span id="${colours[i]}name">${colours[i].charAt(0).toUpperCase()}</span> </td><td><button class="${colours[i]} down">-</button></td><td><button class="${colours[i]} up">+</button></td><td><input type="range" min="0" max="255" value="0" class="slider" id="${colours[i]}-slider"></td></tr>`
     }
   table.innerHTML = tableRow;
   document.querySelector('#menu').appendChild(table);
@@ -99,6 +99,7 @@ function updateColour (){
   document.querySelector('#redname').style.color = `rgb(${red}, 0, 0)`;
   document.querySelector('#greenname').style.color = `rgb(0, ${green}, 0)`;
   document.querySelector('#bluename').style.color = `rgb(0, 0, ${blue})`;
+  document.querySelector('#red-slider').setAttribute('style', `::-webkit-slider-thumb: rgb(${red}, 0, 0)`)
   redslider.value = red;
   greenslider.value = green;
   blueslider.value = blue;
