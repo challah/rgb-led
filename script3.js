@@ -18,16 +18,14 @@ let colourDirection
 
 const menu = document.querySelector('#menu');
 menu.addEventListener('click', function(e) {
-  let colourToChange = '';
   if (e.target.className.includes('red')) {
     activeColour = red;
-    colourToChange = 'red';
   }
   if (e.target.className.includes('green')) {
-    green = activeColour;
+    activeColour = green;
   }
   if (e.target.className.includes('blue')) {
-    blue = activeColour;
+    activeColour = blue;
   }
   if (e.target.className.includes('up')) {
     colourDirection = 'up'
@@ -38,6 +36,14 @@ menu.addEventListener('click', function(e) {
   changeEyeColour(activeColour, colourToChange);
   console.log(activeColour)
 });
+
+function changeColour(colourName, colour, direction) {
+  if (direction === 'up') {
+    colour += 5;
+  } else if (direction === 'down') {
+    colour -= 5;
+  }
+}
 
 function changeEyeColour (){
   if (colourDirection === 'up') {

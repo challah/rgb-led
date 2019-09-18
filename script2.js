@@ -20,25 +20,25 @@ const menu = document.querySelector('#menu');
 menu.addEventListener('click', function(e) {
   if (e.target.className.includes('up')) {
     colourDirection = 'up'
-    if (e.target.className.includes('red')) {
+    if (e.target.className.includes('red') && red <= 255) {
       red += 5;
     }
-    if (e.target.className.includes('green')) {
+    if (e.target.className.includes('green') && green <= 255) {
       green += 5;
     }
-    if (e.target.className.includes('blue')) {
+    if (e.target.className.includes('blue') && blue <= 255) {
       blue += 5;
     }
   }
   if (e.target.className.includes('down')) {
     colourDirection = 'down'
-    if (e.target.className.includes('red')) {
+    if (e.target.className.includes('red') && red >= 0) {
       red -= 5;
      }
-     if (e.target.className.includes('green')) {
+     if (e.target.className.includes('green') && green >= 0) {
      green -= 5;
      }
-     if (e.target.className.includes('blue')) {
+     if (e.target.className.includes('blue') && blue >= 0) {
        blue -= 5;
      }
   }
