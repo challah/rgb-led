@@ -34,6 +34,7 @@ let blueslider = document.querySelector('#blue-slider')
 //   updateColour();
 // }
 
+let colourDirection = '';
 const menu = document.querySelector('#menu');
 menu.addEventListener('click', function(e) {
   if (e.target.className.includes('up')) {
@@ -87,6 +88,7 @@ menu.addEventListener('input', function(e) {
 function changeEyeColour (){
   eye[0].style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
   eye[1].style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+  document.querySelector('h1').style.color = 
   console.log(eye[0])
 }
 
