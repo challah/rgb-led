@@ -16,28 +16,26 @@ createButtons();
 
 //SLIDERS!
 let redslider = document.querySelector('#red-slider')
-redslider.oninput = function() {
-  red = Number(redslider.value);
-  changeEyeColour();
-  updateColour();
-}
+// redslider.oninput = function() {
+//   red = Number(redslider.value);
+//   changeEyeColour();
+//   updateColour();
+// }
 let greenslider = document.querySelector('#green-slider')
-greenslider.oninput = function() {
-  green = Number(greenslider.value);
-  changeEyeColour();
-  updateColour();
-}
+// greenslider.oninput = function() {
+//   green = Number(greenslider.value);
+//   changeEyeColour();
+//   updateColour();
+// }
 let blueslider = document.querySelector('#blue-slider')
-blueslider.oninput = function() {
-  blue = Number(blueslider.value);
-  changeEyeColour();
-  updateColour();
-}
-
+// blueslider.oninput = function() {
+//   blue = Number(blueslider.value);
+//   changeEyeColour();
+//   updateColour();
+// }
 
 const menu = document.querySelector('#menu');
 menu.addEventListener('click', function(e) {
-  if (e.target.)
   if (e.target.className.includes('up')) {
     colourDirection = 'up'
     if (e.target.className.includes('red') && red <= 250) {
@@ -64,6 +62,26 @@ menu.addEventListener('click', function(e) {
   }
   changeEyeColour();
   updateColour();
+});
+
+menu.addEventListener('input', function(e) {
+  if (e.target.tagName === 'INPUT') {
+    if (e.target.id === 'red-slider') {
+       red = Number(redslider.value);
+       changeEyeColour();
+       updateColour();
+    }
+    if (e.target.id === 'green-slider') {
+       green = Number(greenslider.value);
+       changeEyeColour();
+       updateColour();
+    }
+    if (e.target.id === 'blue-slider') {
+       blue = Number(blueslider.value);
+       changeEyeColour();
+       updateColour();
+    }
+  }
 });
 
 function changeEyeColour (){
