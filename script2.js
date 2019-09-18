@@ -14,48 +14,51 @@ function createButtons() {
 }
 createButtons();
 
+//SLIDERS!
 let redslider = document.querySelector('#red-slider')
 redslider.oninput = function() {
-  red = redslider.value;
+  red = Number(redslider.value);
   changeEyeColour();
   updateColour();
 }
 let greenslider = document.querySelector('#green-slider')
 greenslider.oninput = function() {
-  green = greenslider.value;
+  green = Number(greenslider.value);
   changeEyeColour();
   updateColour();
 }
-let blueslider = document.querySelector('#red-slider')
-redslider.oninput = function() {
-  red = redslider.value;
+let blueslider = document.querySelector('#blue-slider')
+blueslider.oninput = function() {
+  blue = Number(blueslider.value);
   changeEyeColour();
   updateColour();
 }
 
+
 const menu = document.querySelector('#menu');
 menu.addEventListener('click', function(e) {
+  if (e.target.)
   if (e.target.className.includes('up')) {
     colourDirection = 'up'
-    if (e.target.className.includes('red') && red < 255) {
+    if (e.target.className.includes('red') && red <= 250) {
       red += 5;
     }
-    if (e.target.className.includes('green') && green < 255) {
+    if (e.target.className.includes('green') && green <= 250) {
       green += 5;
     }
-    if (e.target.className.includes('blue') && blue < 255) {
+    if (e.target.className.includes('blue') && blue <= 250) {
       blue += 5;
     }
   }
   if (e.target.className.includes('down')) {
     colourDirection = 'down'
-    if (e.target.className.includes('red') && red > 0) {
+    if (e.target.className.includes('red') && red >= 5) {
       red -= 5;
      }
-     if (e.target.className.includes('green') && green > 0) {
+     if (e.target.className.includes('green') && green >= 5) {
      green -= 5;
      }
-     if (e.target.className.includes('blue') && blue > 0) {
+     if (e.target.className.includes('blue') && blue >= 5) {
        blue -= 5;
      }
   }
@@ -72,4 +75,6 @@ function changeEyeColour (){
 function updateColour (){
   document.querySelector('#colourvalues').innerHTML = `RGB (${red}, ${green}, ${blue})`;
   redslider.value = red;
+  greenslider.value = green;
+  blueslider.value = blue;
 }
