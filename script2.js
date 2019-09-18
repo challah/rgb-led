@@ -88,7 +88,7 @@ menu.addEventListener('input', function(e) {
 function changeEyeColour (){
   eye[0].style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
   eye[1].style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
-  document.querySelector('h1').style.color = 
+  document.querySelector('h1').style.color = `rgb(${red}, ${green}, ${blue})`;
   console.log(eye[0])
 }
 
