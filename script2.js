@@ -9,12 +9,29 @@ function createButtons() {
         const div = document.createElement('div');
         div.setAttribute('id', colours[i]);
         document.querySelector('#menu').appendChild(div);
-        div.innerHTML = `${colours[i]}: <button class="${colours[i]} up">↑</button><button class="${colours[i]} down">↓</button>`
+        div.innerHTML = `${colours[i]}: <button class="${colours[i]} up">↑</button><button class="${colours[i]} down">↓</button><input type="range" min="0" max="255" value="0" class="slider" id="${colours[i]}-slider">`
     }
 }
 createButtons();
-let activeColour
-let colourDirection
+
+let redslider = document.querySelector('#red-slider')
+redslider.oninput = function() {
+  red = redslider.value;
+  changeEyeColour();
+  updateColour();
+}
+let greenslider = document.querySelector('#green-slider')
+greenslider.oninput = function() {
+  green = greenslider.value;
+  changeEyeColour();
+  updateColour();
+}
+let blueslider = document.querySelector('#red-slider')
+redslider.oninput = function() {
+  red = redslider.value;
+  changeEyeColour();
+  updateColour();
+}
 
 const menu = document.querySelector('#menu');
 menu.addEventListener('click', function(e) {
@@ -54,4 +71,5 @@ function changeEyeColour (){
 
 function updateColour (){
   document.querySelector('#colourvalues').innerHTML = `RGB (${red}, ${green}, ${blue})`;
+  redslider.value = red;
 }
