@@ -99,8 +99,17 @@ function updateColour (){
   document.querySelector('#redname').style.color = `rgb(${red}, 0, 0)`;
   document.querySelector('#greenname').style.color = `rgb(0, ${green}, 0)`;
   document.querySelector('#bluename').style.color = `rgb(0, 0, ${blue})`;
-  document.querySelector('#red-slider').setAttribute('style', `::-webkit-slider-thumb: rgb(${red}, 0, 0)`)
+  // document.querySelector('#red-slider').setAttribute('style', `::-webkit-slider-thumb: background-color: rgb(${red}, 0, 0)`)
   redslider.value = red;
   greenslider.value = green;
   blueslider.value = blue;
 }
+
+// document.styleSheets[0].insertRule('#red-slider::-webkit-slider-thumb: background-color: rgb(${red}, 0, 0)}', 0);
+// document.styleSheets[0].cssRules[0].style.backgroundColor= 'red';
+
+
+
+// #red-slider::-moz-range-thumb {
+//   background: red;
+// }
