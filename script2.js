@@ -18,7 +18,7 @@ function createButtons() {
   let tableRow = []
   const table = document.createElement('table');
     for (let i = 0; i < colours.length; i++) {
-        tableRow += `<tr><td>${colours[i].charAt(0).toUpperCase()} </td><td><button class="${colours[i]} up">↑</button></td><td><button class="${colours[i]} down">↓</button></td><td><input type="range" min="0" max="255" value="0" class="slider" id="${colours[i]}-slider"></td></tr>`
+        tableRow += `<tr><td><span style="color:${colours[i]}">${colours[i].charAt(0).toUpperCase()}</span> </td><td><button class="${colours[i]} up">↑</button></td><td><button class="${colours[i]} down">↓</button></td><td><input type="range" min="0" max="255" value="0" class="slider" id="${colours[i]}-slider"></td></tr>`
     }
   table.innerHTML = tableRow;
   document.querySelector('#menu').appendChild(table);
@@ -28,17 +28,7 @@ createButtons();
 
 //SLIDERS!
 let redslider = document.querySelector('#red-slider')
-// redslider.oninput = function() {
-//   red = Number(redslider.value);
-//   changeEyeColour();
-//   updateColour();
-// }
 let greenslider = document.querySelector('#green-slider')
-// greenslider.oninput = function() {
-//   green = Number(greenslider.value);
-//   changeEyeColour();
-//   updateColour();
-// }
 let blueslider = document.querySelector('#blue-slider')
 // blueslider.oninput = function() {
 //   blue = Number(blueslider.value);
