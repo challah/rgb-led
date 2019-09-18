@@ -15,12 +15,13 @@ const eye = document.querySelectorAll('.eye');
 // createButtons();
 
 function createButtons() {
-  const div = document.createElement('div');
+  let tableRow
+  const table = document.createElement('table');
     for (let i = 0; i < colours.length; i++) {
-        var tableRow = `<tr><td>${colours[i]}: </td><td><button class="${colours[i]} up">↑</button></td><td><button class="${colours[i]} down">↓</button></td><td><input type="range" min="0" max="255" value="0" class="slider" id="${colours[i]}-slider"></td></tr>`
-        tableRow += tableRow
+        tableRow += `<tr><td>${colours[i]}: </td><td><button class="${colours[i]} up">↑</button></td><td><button class="${colours[i]} down">↓</button></td><td><input type="range" min="0" max="255" value="0" class="slider" id="${colours[i]}-slider"></td></tr>`
     }
-  document.querySelector('#menu').appendChild(div);
+  table.innerHTML = tableRow
+  document.querySelector('#menu').appendChild(table);
 }
 createButtons();
 
