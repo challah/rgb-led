@@ -3,7 +3,6 @@ const eye = document.querySelectorAll('.eye');
   let green = 0;
   let blue = 0;
 
-
 const colours = ['red', 'green', 'blue']
 function createButtons() {
     for (let i = 0; i < colours.length; i++) {
@@ -14,17 +13,28 @@ function createButtons() {
     }
 }
 createButtons();
-let activeColour
+let activeColour 
 let colourDirection
 
 const menu = document.querySelector('#menu');
 menu.addEventListener('click', function(e) {
   if (e.target.className.includes('red')) {
-    activeColour = 'red'
+    activeColour = red;
+  }
+  if (e.target.className.includes('green')) {
+    green = activeColour;
+  }
+  if (e.target.className.includes('blue')) {
+    blue = activeColour;
   }
   if (e.target.className.includes('up')) {
     colourDirection = 'up'
   }
+  if (e.target.className.includes('down')) {
+    colourDirection = 'down'
+  }
+  changeEyeColour();
+  console.log(activeColour)
 });
 
 function changeEyeColour (){
@@ -32,8 +42,7 @@ function changeEyeColour (){
   activeColour += 5;
   }
   if (colourDirection === 'down') {
-    activ
+    activeColour -= 5;
   }
   eye[0].style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
-  console.log(eye[0]);
 }
