@@ -1,7 +1,7 @@
 const eye = document.querySelectorAll('.eye');
-let red = 0;
-let green = 0;
-let blue = 0;
+  let red = 0;
+  let green = 0;
+  let blue = 0;
 
 const colours = ['red', 'green', 'blue']
 function createButtons() {
@@ -18,36 +18,34 @@ let colourDirection
 
 const menu = document.querySelector('#menu');
 menu.addEventListener('click', function(e) {
-  if (e.target.className.includes('red')) {
-    activeColour = 'red';
-  }
-  if (e.target.className.includes('green')) {
-    green = activeColour;
-  }
-  if (e.target.className.includes('blue')) {
-    blue = activeColour;
-  }
   if (e.target.className.includes('up')) {
     colourDirection = 'up'
+    if (e.target.className.includes('red')) {
+      red += 5;
+    }
+    if (e.target.className.includes('green')) {
+      green += 5;
+    }
+    if (e.target.className.includes('blue')) {
+      blue += 5;
+    }
   }
   if (e.target.className.includes('down')) {
     colourDirection = 'down'
+    if (e.target.className.includes('red')) {
+      red -= 5;
+     }
+     if (e.target.className.includes('green')) {
+     green -= 5;
+     }
+     if (e.target.className.includes('blue')) {
+       blue -= 5;
+     }
   }
-  changeEyeColour(activeColour);
-  console.log(activeColour)
+  changeEyeColour();
 });
 
-function changeEyeColour (activeColour){
-  let changeColour = 0;
-  if (activeColour === 'red') {
-    changeColour = red;
-  }
-  if (colourDirection === 'up') {
-  activeColour += 5;
-  }
-  if (colourDirection === 'down') {
-  activeColour -= 5;
-  }
+function changeEyeColour (){
   eye[0].style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
   eye[1].style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
   console.log(eye[0])
