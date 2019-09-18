@@ -3,16 +3,27 @@ const eye = document.querySelectorAll('.eye');
   let green = 0;
   let blue = 0;
 
-const colours = ['red', 'green', 'blue']
+ const colours = ['red', 'green', 'blue']
+// function createButtons() {
+//     for (let i = 0; i < colours.length; i++) {
+//         const div = document.createElement('div');
+//         div.setAttribute('id', colours[i]);
+//         document.querySelector('#menu').appendChild(div);
+//         div.innerHTML = `${colours[i]}: <button class="${colours[i]} up">↑</button><button class="${colours[i]} down">↓</button><input type="range" min="0" max="255" value="0" class="slider" id="${colours[i]}-slider">`
+//     }
+// }
+// createButtons();
+
 function createButtons() {
+  const div = document.createElement('div');
     for (let i = 0; i < colours.length; i++) {
-        const div = document.createElement('div');
-        div.setAttribute('id', colours[i]);
-        document.querySelector('#menu').appendChild(div);
-        div.innerHTML = `${colours[i]}: <button class="${colours[i]} up">↑</button><button class="${colours[i]} down">↓</button><input type="range" min="0" max="255" value="0" class="slider" id="${colours[i]}-slider">`
+        var tableRow = `<tr><td>${colours[i]}: </td><td><button class="${colours[i]} up">↑</button></td><td><button class="${colours[i]} down">↓</button></td><td><input type="range" min="0" max="255" value="0" class="slider" id="${colours[i]}-slider"></td></tr>`
+        tableRow += tableRow
     }
+  document.querySelector('#menu').appendChild(div);
 }
 createButtons();
+
 
 //SLIDERS!
 let redslider = document.querySelector('#red-slider')
