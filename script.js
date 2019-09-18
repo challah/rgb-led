@@ -13,13 +13,13 @@ function createButtons() {
     }
 }
 createButtons();
-let activeColour 
+let activeColour
 let colourDirection
 
 const menu = document.querySelector('#menu');
 menu.addEventListener('click', function(e) {
   if (e.target.className.includes('red')) {
-    activeColour = red;
+    red 
   }
   if (e.target.className.includes('green')) {
     green = activeColour;
@@ -38,11 +38,11 @@ menu.addEventListener('click', function(e) {
 });
 
 function changeEyeColour (){
-  if (colourDirection === 'up') {
-  activeColour += 5;
-  }
-  if (colourDirection === 'down') {
-    activeColour -= 5;
-  }
+  // if (colourDirection === 'up') {
+  // activeColour += 5;
+  // }
+  // if (colourDirection === 'down') {
+  //   activeColour -= 5;
+  // }
   eye[0].style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
 }
