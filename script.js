@@ -15,10 +15,12 @@ function changeEyeColour (){
   console.log(eye[0]);
 }
 
-const menu = document.querySelector('#menu');
-menu.innerHTML = '${N}: <button'
-
 const colours = ['red', 'green', 'blue']
-for (let i = 0; i > colours.length; i++) {
-  `${colours[i]}: <button class="${colours[i]} up">↑</button><button class="${colours[i]} down">↓</button>`
+const menu = document.querySelector('#menu');
+// menu.innerHTML = buttons();
+function buttons () {
+  for (let i = 0; i > colours.length-1; i++) {
+     var node = `${colours[i]}: <button class="${colours[i]} up">↑</button><button class="${colours[i]} down">↓</button>`
+  document.getElementById("menu").appendChild(node)
+}
 }
