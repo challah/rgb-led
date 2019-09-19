@@ -1,9 +1,9 @@
 const eye = document.querySelectorAll('.eye');
-  let red = 0;
-  let green = 0;
-  let blue = 0;
+let red = 0;
+let green = 0;
+let blue = 0;
 
- const colours = ['red', 'green', 'blue']
+const colours = ['red', 'green', 'blue']
 // function createButtons() {
 //     for (let i = 0; i < colours.length; i++) {
 //         const div = document.createElement('div');

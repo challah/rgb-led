@@ -4,49 +4,98 @@ let green = 0;
 let blue = 0;
 
 const colours = ['red', 'green', 'blue']
-function createButtons() {
+function createMenu() {
+let tableRow = []
+const table = document.createElement('table');
+//Loop through the colours list to create a tr for each colour, each containing +/- buttons and a slider
     for (let i = 0; i < colours.length; i++) {
-        const div = document.createElement('div');
-        div.setAttribute('id', colours[i]);
-        document.querySelector('#menu').appendChild(div);
-        div.innerHTML = `${colours[i]}: <button class="${colours[i]} up">↑</button><button class="${colours[i]} down">↓</button>`
+        tableRow += `<tr><td><span id="${colours[i]}name">${colours[i].charAt(0).toUpperCase()}</span> </td><td><button class="${colours[i]} down">-</button></td><td><button class="${colours[i]} up">+</button></td><td><input type="range" min="0" max="255" value="0" class="slider" id="${colours[i]}-slider"></td></tr>`
     }
+  table.innerHTML = tableRow;
+  document.querySelector('#menu').appendChild(table);
 }
-createButtons();
-let activeColour
-let colourDirection
+createMenu();
 
+
+//SLIDERS!
+const redslider = document.querySelector('#red-slider')
+const greenslider = document.querySelector('#green-slider')
+const blueslider = document.querySelector('#blue-slider')
+
+let colourDirection = '';
 const menu = document.querySelector('#menu');
 menu.addEventListener('click', function(e) {
-  let colourToChange = '';
-  if (e.target.className.includes('red')) {
-    activeColour = red;
-    colourToChange = 'red';
-  }
-  if (e.target.className.includes('green')) {
-    green = activeColour;
-  }
-  if (e.target.className.includes('blue')) {
-    blue = activeColour;
-  }
   if (e.target.className.includes('up')) {
     colourDirection = 'up'
+    if (e.target.className.includes('red') && red <= 250) {
+      red += 5;
+    }
+    if (e.target.className.includes('green') && green <= 250) {
+      green += 5;
+    }
+    if (e.target.className.includes('blue') && blue <= 250) {
+      blue += 5;
+    }
   }
   if (e.target.className.includes('down')) {
     colourDirection = 'down'
+    if (e.target.className.includes('red') && red >= 5) {
+      red -= 5;
+     }
+     if (e.target.className.includes('green') && green >= 5) {
+     green -= 5;
+     }
+     if (e.target.className.includes('blue') && blue >= 5) {
+       blue -= 5;
+     }
   }
-  changeEyeColour(activeColour, colourToChange);
-  console.log(activeColour)
+  changeEyeColour();
+  updateColour();
+});
+
+menu.addEventListener('input', function(e) {
+  if (e.target.tagName === 'INPUT') {
+    if (e.target.id === 'red-slider') {
+       red = Number(redslider.value);
+       changeEyeColour();
+       updateColour();
+    }
+    if (e.target.id === 'green-slider') {
+       green = Number(greenslider.value);
+       changeEyeColour();
+       updateColour();
+    }
+    if (e.target.id === 'blue-slider') {
+       blue = Number(blueslider.value);
+       changeEyeColour();
+       updateColour();
+    }
+  }
 });
 
 function changeEyeColour (){
-  if (colourDirection === 'up') {
-  activeColour += 5;
-  }
-  if (colourDirection === 'down') {
-  activeColour -= 5;
-  }
   eye[0].style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
   eye[1].style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+  document.querySelector('h1').style.color = `rgb(${red}, ${green}, ${blue})`;
   console.log(eye[0])
 }
+
+function updateColour (){
+  document.querySelector('#colourvalues').innerHTML = `RGB (${red}, ${green}, ${blue})`;
+  document.querySelector('#redname').style.color = `rgb(${red}, 0, 0)`;
+  document.querySelector('#greenname').style.color = `rgb(0, ${green}, 0)`;
+  document.querySelector('#bluename').style.color = `rgb(0, 0, ${blue})`;
+  // document.querySelector('#red-slider').setAttribute('style', `::-webkit-slider-thumb: background-color: rgb(${red}, 0, 0)`)
+  redslider.value = red;
+  greenslider.value = green;
+  blueslider.value = blue;
+}
+
+// document.styleSheets[0].insertRule('#red-slider::-webkit-slider-thumb: background-color: rgb(${red}, 0, 0)}', 0);
+// document.styleSheets[0].cssRules[0].style.backgroundColor= 'red';
+
+
+
+// #red-slider::-moz-range-thumb {
+//   background: red;
+// }
