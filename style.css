@@ -15,14 +15,41 @@ h1 {
   color: #373fff;
 }
 
+.cubby {
+  background-image: url('https://cdn.glitch.com/248c7c49-a121-48d3-a384-6862ab105334%2FScreen%20Shot%202019-09-19%20at%2012.52.47%20AM.png?v=1568868822781');
+  background-repeat: no-repeat;
+  width: 272px;
+  height: 453px;
+}
+
 .eye {
-  border: 3px solid black;
-  display: inline-block;
-  width: 50px;
-  height: 50px;
+  border: 6px solid black;
+  width: 70px;
+  height: 70px;
   border-radius: 100%;
   background-color:  rgb(0, 0, 0);
   position: relative;
+  
+}
+
+#eye1 {
+  left: 63px;
+  top: 115px;
+}
+
+#eye2 {
+  left: 145px;
+  top: 45px;
+}
+
+.arc{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    border-right:1px solid black;
+    border-left:1px solid black;
+    border-top:1px solid black;
+    border-bottom:1px solid white;
 }
 
 /* .eye-r, .eye-g, .eye-b {
