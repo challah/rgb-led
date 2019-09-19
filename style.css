@@ -11,6 +11,12 @@ body {
   font-size: 18px;
 }
 
+#footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 12px;
+}
+
 h1 {
   font-style: italic;
   color: black;
@@ -159,15 +165,17 @@ padding-bottom:4px;
 padding-top:4px;
 position:relative;
 text-align:center;
-text-decoration-color:rgb(255, 255, 255);
-text-decoration-line:none;
-text-decoration-style:solid;
-text-shadow:rgba(0, 0, 0, 0.
 }
 
-#footer {
-  text-align: center;
-  padding: 20px;
-  font-size: .5em;
+a {
+   background: -webkit-gradient(linear,left top,right top,from(red),to(green),to(blue));
+    background: linear-gradient(to right,red,green,blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  border-bottom: 2px solid black;
 }
 
