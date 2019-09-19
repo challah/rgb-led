@@ -16,12 +16,7 @@ const table = document.createElement('table');
 }
 createMenu();
 
-
-//SLIDERS!
-const redslider = document.querySelector('#red-slider')
-const greenslider = document.querySelector('#green-slider')
-const blueslider = document.querySelector('#blue-slider')
-
+//Button inputs
 let colourDirection = '';
 const menu = document.querySelector('#menu');
 menu.addEventListener('click', function(e) {
@@ -53,6 +48,10 @@ menu.addEventListener('click', function(e) {
   updateColour();
 });
 
+//Slider input
+const redslider = document.querySelector('#red-slider');
+const greenslider = document.querySelector('#green-slider');
+const blueslider = document.querySelector('#blue-slider');
 menu.addEventListener('input', function(e) {
   if (e.target.tagName === 'INPUT') {
     if (e.target.id === 'red-slider') {
@@ -73,29 +72,21 @@ menu.addEventListener('input', function(e) {
   }
 });
 
+//Change the eye colours!
 function changeEyeColour (){
   eye[0].style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
   eye[1].style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
-  document.querySelector('h1').style.color = `rgb(${red}, ${green}, ${blue})`;
   console.log(eye[0])
 }
 
+//Update the RGB number reading, style the h1, style the RGB menu text, update the slider values
 function updateColour (){
   document.querySelector('#colourvalues').innerHTML = `RGB (${red}, ${green}, ${blue})`;
+  document.querySelector('h1').style.color = `rgb(${red}, ${green}, ${blue})`;
   document.querySelector('#redname').style.color = `rgb(${red}, 0, 0)`;
   document.querySelector('#greenname').style.color = `rgb(0, ${green}, 0)`;
   document.querySelector('#bluename').style.color = `rgb(0, 0, ${blue})`;
-  // document.querySelector('#red-slider').setAttribute('style', `::-webkit-slider-thumb: background-color: rgb(${red}, 0, 0)`)
   redslider.value = red;
   greenslider.value = green;
   blueslider.value = blue;
 }
-
-// document.styleSheets[0].insertRule('#red-slider::-webkit-slider-thumb: background-color: rgb(${red}, 0, 0)}', 0);
-// document.styleSheets[0].cssRules[0].style.backgroundColor= 'red';
-
-
-
-// #red-slider::-moz-range-thumb {
-//   background: red;
-// }
