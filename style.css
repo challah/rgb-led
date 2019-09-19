@@ -41,16 +41,7 @@ h1 {
   left: 145px;
   top: 45px;
 }
-
-.arc{
-    width:150px;
-    height:150px;
-    border-radius:50%;
-    border-right:1px solid black;
-    border-left:1px solid black;
-    border-top:1px solid black;
-    border-bottom:1px solid white;
-}
+  
 
 /* .eye-r, .eye-g, .eye-b {
   border-radius: 100%;
@@ -125,3 +116,5 @@ button {
 #blue-slider::-moz-range-thumb {
   background: blue;
 }
+
+.color .red    {background: #fa5a5a;}
