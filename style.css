@@ -86,6 +86,7 @@ h1 {
 }
 
 button {
+  appearance: none;
   width: 25px;
   height: 25px;
   border-radius: 5px;
@@ -117,4 +118,47 @@ button {
   background: blue;
 }
 
-.color .red    {background: #fa5a5a;}
+.red {
+  background-color:rgb(227, 82, 82);
+}
+
+.green {
+  background-color: rgba(130,200,160,1);
+}
+
+.blue {
+  background-color: rgb(102,152,203);
+}
+
+button {
+border-bottom-color:rgba(0, 0, 0, 0.21);
+border-radius: 4px;
+border-bottom-style:solid;
+border-bottom-width:4px;
+border-image-outset:0px;
+border-image-repeat:stretch;
+border-image-slice:100%;
+border-image-source:none;
+border-image-width:1;
+border-left-color:rgba(0, 0, 0, 0.21);
+border-left-style:solid;
+border-left-width:1px;
+border-right-color:rgba(0, 0, 0, 0.21);
+border-right-style:solid;
+border-right-width:1px;
+border-top-color:rgba(0, 0, 0, 0.21);
+border-top-left-radius:4px;
+border-top-right-radius:4px;
+border-top-style:solid;
+border-top-width:1px;
+color: white;
+padding-bottom:4px;
+padding-top:4px;
+position:relative;
+text-align:center;
+text-decoration-color:rgb(255, 255, 255);
+text-decoration-line:none;
+text-decoration-style:solid;
+text-shadow:rgba(0, 0, 0, 0.
+}
+
