@@ -6,13 +6,16 @@ html {
 }
 
 body {
-  font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+  font-family: 'Space Mono', monospace;
   margin: 2em;
+  font-size: 18px;
 }
 
 h1 {
   font-style: italic;
   color: black;
+  font-size: 4em;
+  margin: 10px;
 }
 
 .flex-container {
@@ -160,5 +163,11 @@ text-decoration-color:rgb(255, 255, 255);
 text-decoration-line:none;
 text-decoration-style:solid;
 text-shadow:rgba(0, 0, 0, 0.
+}
+
+#footer {
+  text-align: center;
+  padding: 20px;
+  font-size: .5em;
 }
 
