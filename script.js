@@ -3,7 +3,7 @@ let red = 0;
 let green = 0;
 let blue = 0;
 
-const colours = ['red', 'green', 'blue']
+const colours = ['red', 'green', 'blue'];
 function createMenu() {
 let tableRow = []
 const table = document.createElement('table');
