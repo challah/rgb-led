@@ -8,7 +8,8 @@ html {
 body {
   font-family: 'Space Mono', monospace;
   margin: 2em;
-  font-size: 18px;
+  font-size: 24px;
+  padding: 
 }
 
 #footer {
@@ -19,9 +20,9 @@ body {
 
 h1 {
   font-style: italic;
-  color: black;
   font-size: 4em;
   margin: 10px;
+  padding: 10px;
 }
 
 .flex-container {
@@ -167,11 +168,14 @@ position:relative;
 text-align:center;
 }
 
-a {
+.gradient {
    background: -webkit-gradient(linear,left top,right top,from(red),to(green),to(blue));
     background: linear-gradient(to right,red,green,blue);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+a {
   text-decoration: none;
   font-style: italic;
 }
