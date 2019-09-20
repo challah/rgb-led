@@ -9,7 +9,7 @@ let tableRow = []
 const table = document.createElement('table');
 //Loop through the colours list to create a tr for each colour, each containing +/- buttons and a slider
     for (let i = 0; i < colours.length; i++) {
-        tableRow += `<tr><td><span id="${colours[i]}name">${colours[i].charAt(0).toUpperCase()}</span> </td><td><button class="${colours[i]} down">-</button></td><td><button class="${colours[i]} up">+</button></td><td><input type="range" min="0" max="255" value="0" class="slider" id="${colours[i]}-slider"></td></tr>`
+        tableRow += `<tr><td><span id="${colours[i]}name" class="menulabel">${colours[i].charAt(0).toUpperCase()}</span> </td><td><button class="${colours[i]} down">-</button></td><td><button class="${colours[i]} up">+</button></td><td><input type="range" min="0" max="255" value="0" class="slider" id="${colours[i]}-slider"></td></tr>`
     }
   table.innerHTML = tableRow;
   document.querySelector('#menu').appendChild(table);
