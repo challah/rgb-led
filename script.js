@@ -226,6 +226,6 @@ for (let i=0; i < achievements.length; i++){
   let checker = arr => arr.every(v => v === true);
   let showExtra = checker(achievements)
   if (showExtra === true) {
-    document.querySelector('#extra').style.visibility = 'visible';
+    document.querySelector('#extra').style.display = 'block';
   }
 }
