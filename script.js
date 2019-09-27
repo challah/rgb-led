@@ -113,6 +113,13 @@ function updateColour (){
   redslider.value = red;
   greenslider.value = green;
   blueslider.value = blue;
+
+  checkAchievements();
+}
+
+//Check for Achievements
+const elementsList = []
+function checkAchievements () {
   if (red === 255 && green === 0 && blue === 0) {
   achievements[0] = true;}
   if (red === 0 && green === 255 && blue === 0) {
@@ -127,12 +134,6 @@ function updateColour (){
   achievements[5] = true;}
   if (red === 255 && green === 255 && blue === 255) {
   achievements[6] = true;}  
-  replace();
-}
-
-//Check for Achievements
-const elementsList = []
-function replace () {
 for (let i=0; i < achievements.length; i++){  
   let element = document.getElementById(stringyAchievements[i].toLowerCase())
   elementsList.push(element)
