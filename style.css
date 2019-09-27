@@ -35,7 +35,7 @@ ul {
   list-style-type: none;
   list-style-position: outside;
   position: relative;
-/*   left: -20px; */
+  left: -20px;
   column-count: 2;
 }
 
@@ -46,14 +46,26 @@ ul {
   text-align: center;
   width: 40vw;
   min-width: 400px;
-  height: 30vh;
+/*   height: 30vh; */
   margin: auto;
    
 }
 
 #extra {
 /*   visibility: hidden; */
+  margin: 10px;
+}
+
+#extra > button{
   font-weight: bold;
+  font-size: 18px;
+  
+}
+
+table {
+  background-color: #d3d3d3;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 /* CUBBY ---------- */
@@ -96,7 +108,7 @@ ul {
   width: 100%;
   height: 5px;
   border-radius: 5px;
-  background: #d3d3d3;
+  background: black;
   outline: none;
   opacity: 0.7;
   -webkit-transition: .2s;
@@ -191,8 +203,7 @@ ul {
 
 /* FOOTER ---------- */
 footer {
-  
-  
+  margin-top: 20px;
 }
 .gradient {
   background: -webkit-gradient(linear,left top,right top,from(red),to(green),to(blue));
@@ -212,7 +223,7 @@ a:hover {
 }
 
 #extra > button {
-  height: 2.5em;
+  height: 3em;
   border-radius: 5px;
   border: 2px solid black;
 }
@@ -278,4 +289,13 @@ animation:rainbow 1s infinite;
 
 #makewhite > span {
   background-color: black;
+}
+
+@media (max-width: 768px) {
+  ul {
+   column-count: 1;
+  }
+  h1 {
+    font-size: 3em;
+  }
 }
