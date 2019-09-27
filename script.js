@@ -72,12 +72,7 @@ menu.addEventListener('input', function(e) {
   }
 });
 
-//Change the eye colours!
-function changeEyeColour (){
-  eye[0].setAttribute('fill', `rgb(${red}, ${green}, ${blue})`);
-  eye[1].setAttribute('fill', `rgb(${red}, ${green}, ${blue})`);
-  console.log(eye)
-}
+
 
 //Update the RGB number reading, style the h1, style the RGB menu text, update the slider values
 function updateColour (){
@@ -89,4 +84,27 @@ function updateColour (){
   redslider.value = red;
   greenslider.value = green;
   blueslider.value = blue;
+}
+
+//Accomplishments
+let makeRed = false;
+let makeGreen = false;
+let makeBlue = false;
+let makeCyan = false;
+let makeMagenta = false;
+let makeYellow = false;
+let makeWhite = false;
+
+if (red === 255) {
+  makeRed = true;
+  console.log(makeRed);
+}
+
+//Change the eye colours!
+function changeEyeColour (){
+  eye[0].setAttribute('fill', `rgb(${red}, ${green}, ${blue})`);
+  eye[1].setAttribute('fill', `rgb(${red}, ${green}, ${blue})`);
+  console.log(makeRed);
+  console.log(red)
+  // console.log(eye)
 }
