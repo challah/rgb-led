@@ -26,12 +26,28 @@ let makeYellow = false;
 let makeWhite = false;
 const achievements = [makeRed, makeGreen, makeBlue, makeCyan, makeMagenta, makeYellow, makeWhite];
 
-var node = document.createElement("LI");                 // Create a <li> node
-var textnode = document.createTextNode("??????");         // Create a text node
-node.appendChild(textnode);                              // Append the text to <li>
-document.querySelector("#achievements")
 
+function makeAchievements() {
+  for (let i = 0; i < achievements.length; i++) {
+  let node = document.createElement("LI");                
+  let textnode = document.createTextNode("??????");
+  node.appendChild(textnode);                              
+  document.querySelector("#achievements").appendChild(node);
+  }
+}
+makeAchievements();
 
+function replace(){
+// Create a new text node called "Water"
+var textnode = document.createTextNode("You made RED!");
+
+// Get the first child node of an <ul> element
+var item = document.querySelector("#achievements").childNodes[0];
+
+// Replace the first child node of <ul> with the newly created text node
+item.replaceChild(textnode, item.childNodes[0]);
+}
+replace();
 
 //Button inputs
 let colourDirection = '';
