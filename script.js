@@ -56,10 +56,13 @@ makeAchievements();
 // };
 
 function replace () {
-    var textnode = document.createTextNode("D");
-    var item = document.getElementById("achievements");
-    // item.replaceChild(textnode, item.childNodes[0]);
-  console.log(item.childNodes[0])
+var elmnt = document.createElement("li");
+var textnode = document.createTextNode("You made RED!");
+elmnt.appendChild(textnode);
+var item = document.getElementById("achievements");
+
+// Replace the first child node (<li> with index 0) in <ul> with the newly created <li> element
+item.replaceChild(elmnt, item.childNodes[0]);
 }
 
 replace();
