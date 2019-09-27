@@ -24,7 +24,7 @@ let makeCyan = false;
 let makeMagenta = false;
 let makeYellow = false;
 let makeWhite = false;
-const achievements = [makeRed, makeGreen, makeBlue, makeCyan, makeMagenta, makeYellow, makeWhite];
+let achievements = [makeRed, makeGreen, makeBlue, makeCyan, makeMagenta, makeYellow, makeWhite];
 const stringyAchievements = ["makeRed", "makeGreen", "makeBlue", "makeCyan", "makeMagenta", "makeYellow", "makeWhite"];
 
 // console.log(stringyAchievements.toString());
@@ -64,26 +64,7 @@ for (let i = 0; i < achievements.length; i ++) {
 
   console.log(nodesList)
 
-const elementsList = []
-function replace () {
-// var elmnt = document.createElement("li");
-// var textnode = document.createTextNode("You made RED!");
-// elmnt.appendChild(nodesList[0]);
-// var item = document.getElementById("makered");
-for (let i=0; i < achievements.length; i++){  
-  let element = document.getElementById(stringyAchievements[i].toLowerCase())
-  elementsList.push(element)
-}   
-for (let i=0; i < achievements.length; i++){  
-  // console.log(document.getElementById(stringyAchievements[i].toLowerCase()).innerHTML = nodesList[i])
-  // console.log(nodesList[i])
-  if (achievements[i] === true) {
-  // document.getElementById(stringyAchievements[i].toLowerCase()).innerHTML = nodesList[i];
-  elementsList[i].innerHTML = nodesList[i];
-  console.log(nodesList[i])
-} 
-}
-}
+
 
 //Button inputs
 let colourDirection = '';
@@ -169,6 +150,9 @@ function updateColour (){
   makeWhite = true;}
   
   replace();
+  console.log(achievements)
+  console.log(makeRed)
+  
 // accomplishmentsCheck();
 }
 const randomButton = document.querySelector('#random');
@@ -215,4 +199,26 @@ function changeEyeColour (){
   eye[0].setAttribute('fill', `rgb(${red}, ${green}, ${blue})`);
   eye[1].setAttribute('fill', `rgb(${red}, ${green}, ${blue})`);
 
+}
+
+
+const elementsList = []
+function replace () {
+// var elmnt = document.createElement("li");
+// var textnode = document.createTextNode("You made RED!");
+// elmnt.appendChild(nodesList[0]);
+// var item = document.getElementById("makered");
+for (let i=0; i < achievements.length; i++){  
+  let element = document.getElementById(stringyAchievements[i].toLowerCase())
+  elementsList.push(element)
+}   
+for (let i=0; i < achievements.length; i++){  
+  // console.log(document.getElementById(stringyAchievements[i].toLowerCase()).innerHTML = nodesList[i])
+  // console.log(nodesList[i])
+  if (achievements[i] === true) {
+  // document.getElementById(stringyAchievements[i].toLowerCase()).innerHTML = nodesList[i];
+  elementsList[i].innerHTML = nodesList[i];
+  console.log(nodesList[i])
+} 
+}
 }
