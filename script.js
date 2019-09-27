@@ -26,11 +26,18 @@ let makeYellow = false;
 let makeWhite = false;
 const achievements = [makeRed, makeGreen, makeBlue, makeCyan, makeMagenta, makeYellow, makeWhite];
 
-const varToString = achievements => Object.keys(achievements)[0]
 
-const someVar = 42
-const displayName = varToString({ someVar })
-console.log(displayName);
+// let nameObject = {makeRed};
+for(let i = 0; i < achievements.length; i++) {
+let nameObject = achievements[i]
+let getVarNameFromObject = (nameObject) => {
+  for(let varName in nameObject) {
+    return varName;
+  }
+}
+let varName = getVarNameFromObject(nameObject);
+console.log(varName.slice(4, varName.length))
+}
 
 function makeAchievements() {
   for (let i = 0; i < achievements.length; i++) {
