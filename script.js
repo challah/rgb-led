@@ -117,9 +117,17 @@ randomButton.addEventListener('click', random);
 function random (){
  red = Math.floor(Math.random() * 256);
  green = Math.floor(Math.random() * 256);
-blue = green = Math.floor(Math.random() * 256);
-         changeEyeColour();
-       updateColour();
+ blue = Math.floor(Math.random() * 256);
+ changeEyeColour();
+ updateColour();
+}
+const partyButton = document.querySelector('#party');
+partyButton.addEventListener('click', party);
+let partyMode = false;
+
+function party (){
+  if apsetInterval(random, 100);
+  partyMode = true;
 }
 
 
@@ -135,7 +143,5 @@ blue = green = Math.floor(Math.random() * 256);
 function changeEyeColour (){
   eye[0].setAttribute('fill', `rgb(${red}, ${green}, ${blue})`);
   eye[1].setAttribute('fill', `rgb(${red}, ${green}, ${blue})`);
-  console.log(makeRed);
-  console.log(red)
-  // console.log(eye)
+
 }
