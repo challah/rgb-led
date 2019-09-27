@@ -55,29 +55,26 @@ makeAchievements();
 // item.replaceChild(textnode, item.childNodes[0]);
 // };
 
-function replace () {
-var elmnt = document.createElement("li");
-var textnode = document.createTextNode("You made RED!");
-elmnt.appendChild(textnode);
-var item = document.getElementById("achievements");
-if (makeRed === true) {
-  item.replaceChild(elmnt, item.childNodes[0]);
-}
-}
-
-var nodes = []
-for (let i = 0; i < stringyAchievements.length; i ++) {
-  for (let i = 0; i < achievements.length; i++) {
-  let node = document.createElement("LI"); 
+const nodesList = []
+for (let i = 0; i < achievements.length; i ++) {
   let lowercase = stringyAchievements[i].slice(4, stringyAchievements[i].length).toLowerCase()
-  let textnode = document.createTextNode("You made <style='color:${lowercase}'>${lowercase}</style>");
-  node.appendChild(textnode);
-  console.log((stringyAchievements[i].slice(4, stringyAchievements[i].length)).toLowerCase());
-  nodes.push(i++)
+  let text = `You made <span style='color:${lowercase}'>${lowercase}</span>!`;
+  nodesList.push(text)
 }
 
-  console.log(nodes)
+  console.log(nodesList)
 
+function replace () {
+// var elmnt = document.createElement("li");
+// var textnode = document.createTextNode("You made RED!");
+// elmnt.appendChild(nodesList[0]);
+var item = document.getElementById("makered");
+for (let i=0; i < achievements.length; i++){  
+  if (achievements[i] === true) {
+  item.innerHTML = nodesList[i];
+} 
+}
+}
 
 //Button inputs
 let colourDirection = '';
