@@ -1,7 +1,7 @@
+const eye = document.querySelectorAll('.eye');
 let red = 0;
 let green = 0;
 let blue = 0;
-const eye = document.querySelector('.st13');
 
 const colours = ['red', 'green', 'blue'];
 function createMenu() {
@@ -74,8 +74,9 @@ menu.addEventListener('input', function(e) {
 
 //Change the eye colours!
 function changeEyeColour (){
-  eye.setAttribute.fillColor = `rgb(${red}, ${green}, ${blue})`;
-  console.log(eye)
+  eye[0].style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+  eye[1].style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+  console.log(eye[0])
 }
 
 //Update the RGB number reading, style the h1, style the RGB menu text, update the slider values
