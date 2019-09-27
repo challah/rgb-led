@@ -60,12 +60,23 @@ var elmnt = document.createElement("li");
 var textnode = document.createTextNode("You made RED!");
 elmnt.appendChild(textnode);
 var item = document.getElementById("achievements");
-
-// Replace the first child node (<li> with index 0) in <ul> with the newly created <li> element
-item.replaceChild(elmnt, item.childNodes[0]);
+if (makeRed === true) {
+  item.replaceChild(elmnt, item.childNodes[0]);
+}
 }
 
-replace();
+var nodes = []
+for (let i = 0; i < stringyAchievements.length; i ++) {
+  for (let i = 0; i < achievements.length; i++) {
+  let node = document.createElement("LI"); 
+  let lowercase = stringyAchievements[i].slice(4, stringyAchievements[i].length).toLowerCase()
+  let textnode = document.createTextNode("You made <style='color:${lowercase}'>${lowercase}</style>");
+  node.appendChild(textnode);
+  console.log((stringyAchievements[i].slice(4, stringyAchievements[i].length)).toLowerCase());
+  nodes.push(i++)
+}
+
+  console.log(nodes)
 
 
 //Button inputs
@@ -150,9 +161,8 @@ function updateColour (){
   makeYellow = true;}
   if (red === 255 && green === 255 && blue === 255) {
   makeWhite = true;}
-  if (makeRed = true) {
-  // console.log(`You made red!`)
-}
+  
+  replace();
 // accomplishmentsCheck();
 }
 const randomButton = document.querySelector('#random');
