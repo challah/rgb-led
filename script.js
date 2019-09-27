@@ -57,9 +57,9 @@ makeAchievements();
 
 function replace () {
     var textnode = document.createTextNode("D");
-    var item = document.getElementById("achievements").childNodes[0];
-    item.replaceChild(textnode,item.childNodes[0]);
-  
+    var item = document.getElementById("achievements");
+    // item.replaceChild(textnode, item.childNodes[0]);
+  console.log(item.childNodes[0])
 }
 
 replace();
