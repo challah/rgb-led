@@ -249,3 +249,7 @@ animation:rainbow 1s infinite;
 90% {background-color: #8000ff;}
 100% {background-color: #ff0080;}
 }
+
+#makewhite > span {
+  background-color: black;
+}

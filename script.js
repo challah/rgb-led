@@ -64,21 +64,23 @@ for (let i = 0; i < achievements.length; i ++) {
 
   console.log(nodesList)
 
+const elementsList = []
 function replace () {
 // var elmnt = document.createElement("li");
 // var textnode = document.createTextNode("You made RED!");
 // elmnt.appendChild(nodesList[0]);
 // var item = document.getElementById("makered");
 for (let i=0; i < achievements.length; i++){  
-  // console.log(document.getElementById(stringyAchievements[i].toLowerCase()).innerHTML = nodesList[i])
-  var element = document.getElementById(stringyAchievements[i].toLowerCase()); 
-  if (achievements[i] === true) {
-  document.getElementById(stringyAchievements[i].toLowerCase()).innerHTML = nodesList[i];
+  let element = document.getElementById(stringyAchievements[i].toLowerCase())
+  elementsList.push(element)
 }   
 for (let i=0; i < achievements.length; i++){  
   // console.log(document.getElementById(stringyAchievements[i].toLowerCase()).innerHTML = nodesList[i])
+  // console.log(nodesList[i])
   if (achievements[i] === true) {
-  document.getElementById(stringyAchievements[i].toLowerCase()).innerHTML = nodesList[i];
+  // document.getElementById(stringyAchievements[i].toLowerCase()).innerHTML = nodesList[i];
+  elementsList[i].innerHTML = nodesList[i];
+  console.log(nodesList[i])
 } 
 }
 }
