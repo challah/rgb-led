@@ -31,6 +31,24 @@ h1 {
   align-items: center;
 }
 
+ul {
+  list-style-type: none;
+  list-style-position: outside;
+}
+
+#achievements-cont {
+  display: flex;
+   flex-direction: column;
+/*   width: 200px; */
+  position: fixed;
+  right: 50px;
+  top: 50vh;
+}
+
+#extra {
+  visibility: hidden;
+}
+
 /* CUBBY ---------- */
 
 .cubby {

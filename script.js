@@ -150,8 +150,10 @@ function updateColour (){
   achievements[6] = true;}
   
   replace();
-  console.log(achievements) //ni hao laoshi
-  console.log(makeRed)
+  // console.log(achievements) 
+  
+  //ni hao laoshi
+  // console.log(makeRed)
   
 // accomplishmentsCheck();
 }
@@ -221,4 +223,9 @@ for (let i=0; i < achievements.length; i++){
   console.log(nodesList[i])
 } 
 }
+  let checker = arr => arr.every(v => v === true);
+  let showExtra = checker(achievements)
+  if (showExtra === true) {
+    document.querySelector('#extra').style.visibility = 'visible';
+  }
 }
