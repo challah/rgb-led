@@ -1,7 +1,7 @@
 let red = 0;
 let green = 0;
 let blue = 0;
-const eye = document.querySelector('.st13');
+const eye = document.querySelectorAll('.st13');
 
 const colours = ['red', 'green', 'blue'];
 function createMenu() {
@@ -74,7 +74,8 @@ menu.addEventListener('input', function(e) {
 
 //Change the eye colours!
 function changeEyeColour (){
-  eye.setAttribute.fillColor = `rgb(${red}, ${green}, ${blue})`;
+  eye[0].setAttribute('fill', `rgb(${red}, ${green}, ${blue})`);
+  eye[1].setAttribute('fill', `rgb(${red}, ${green}, ${blue})`);
   console.log(eye)
 }
 
