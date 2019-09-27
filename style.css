@@ -142,7 +142,7 @@ h1 {
 .blue {
   background-color: rgb(102,152,203);
 }
-button:active {
+.red:active, .green:active, .blue:active {
   border-width: 0px 1px 3px 1px;
   height: 20px;
 }
@@ -187,7 +187,7 @@ a:hover {
 }
 
 #extra > button {
-  height: 20px;
+  height: 2.5em;
   border-radius: 5px;
 }
 

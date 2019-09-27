@@ -16,6 +16,23 @@ const table = document.createElement('table');
 }
 createMenu();
 
+//Accomplishments
+let makeRed = false;
+let makeGreen = false;
+let makeBlue = false;
+let makeCyan = false;
+let makeMagenta = false;
+let makeYellow = false;
+let makeWhite = false;
+const achievements = [makeRed, makeGreen, makeBlue, makeCyan, makeMagenta, makeYellow, makeWhite];
+
+var node = document.createElement("LI");                 // Create a <li> node
+var textnode = document.createTextNode("??????");         // Create a text node
+node.appendChild(textnode);                              // Append the text to <li>
+document.querySelector("#achievements")
+
+
+
 //Button inputs
 let colourDirection = '';
 const menu = document.querySelector('#menu');
@@ -72,15 +89,7 @@ menu.addEventListener('input', function(e) {
   }
 });
 
-//Accomplishments
-let makeRed = false;
-let makeGreen = false;
-let makeBlue = false;
-let makeCyan = false;
-let makeMagenta = false;
-let makeYellow = false;
-let makeWhite = false;
-const accomplishments = [makeRed, makeGreen, makeBlue, makeCyan, makeMagenta, makeYellow, makeWhite];
+
 
 //Update the RGB number reading, style the h1, style the RGB menu text, update the slider values
 function updateColour (){
@@ -107,7 +116,7 @@ function updateColour (){
   if (red === 255 && green === 255 && blue === 255) {
   makeWhite = true;}
   if (makeRed = true) {
-  // console.log(`You made ${('' + makeRed).slice(0, 4)}`)
+  // console.log(`You made red!`)
 }
 // accomplishmentsCheck();
 }
