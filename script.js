@@ -68,10 +68,17 @@ function replace () {
 // var elmnt = document.createElement("li");
 // var textnode = document.createTextNode("You made RED!");
 // elmnt.appendChild(nodesList[0]);
-var item = document.getElementById("makered");
+// var item = document.getElementById("makered");
 for (let i=0; i < achievements.length; i++){  
+  // console.log(document.getElementById(stringyAchievements[i].toLowerCase()).innerHTML = nodesList[i])
+  var element = document.getElementById(stringyAchievements[i].toLowerCase()); 
   if (achievements[i] === true) {
-  item.innerHTML = nodesList[i];
+  document.getElementById(stringyAchievements[i].toLowerCase()).innerHTML = nodesList[i];
+}   
+for (let i=0; i < achievements.length; i++){  
+  // console.log(document.getElementById(stringyAchievements[i].toLowerCase()).innerHTML = nodesList[i])
+  if (achievements[i] === true) {
+  document.getElementById(stringyAchievements[i].toLowerCase()).innerHTML = nodesList[i];
 } 
 }
 }
