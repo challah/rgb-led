@@ -135,22 +135,22 @@ function updateColour (){
   greenslider.value = green;
   blueslider.value = blue;
   if (red === 255 && green === 0 && blue === 0) {
-  makeRed = true;}
+  achievements[0] = true;}
   if (red === 0 && green === 255 && blue === 0) {
-  makeGreen = true;}
+  achievements[1] = true;}
   if (red === 0 && green === 0 && blue === 255) {
-  makeBlue = true;}
+  achievements[2] = true;}
   if (red === 0 && green === 255 && blue === 255) {
-  makeCyan = true;}
+  achievements[3] = true;}
   if (red === 255 && green === 0 && blue === 255) {
-  makeMagenta = true;}
+  achievements[4] = true;}
   if (red === 255 && green === 255 && blue === 0) {
-  makeYellow = true;}
+  achievements[5] = true;}
   if (red === 255 && green === 255 && blue === 255) {
-  makeWhite = true;}
+  achievements[6] = true;}
   
   replace();
-  console.log(achievements)
+  console.log(achievements) //ni hao laoshi
   console.log(makeRed)
   
 // accomplishmentsCheck();
