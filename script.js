@@ -72,7 +72,15 @@ menu.addEventListener('input', function(e) {
   }
 });
 
-
+//Accomplishments
+let makeRed = false;
+let makeGreen = false;
+let makeBlue = false;
+let makeCyan = false;
+let makeMagenta = false;
+let makeYellow = false;
+let makeWhite = false;
+const accomplishments = [makeRed, makeGreen, makeBlue, makeCyan, makeMagenta, makeYellow, makeWhite];
 
 //Update the RGB number reading, style the h1, style the RGB menu text, update the slider values
 function updateColour (){
@@ -86,7 +94,6 @@ function updateColour (){
   blueslider.value = blue;
   if (red === 255 && green === 0 && blue === 0) {
   makeRed = true;
-  console.log(makeRed);}
   if (red === 0 && green === 255 && blue === 0) {
   makeGreen = true;}
   if (red === 0 && green === 0 && blue === 255) {
@@ -99,23 +106,14 @@ function updateColour (){
   makeYellow = true;}
   if (red === 255 && green === 255 && blue === 255) {
   makeWhite = true;}
-  // for (let i = 0; i < accomplishments.length, i ++) {
-  //   accomplishments[i] = true
-  // }
+  
+accomplishmentsCheck();
 }
 
-const accomplishments = [makeRed, makeGreen, makeBlue, makeCyan, makeMagenta, makeYellow, makeWhite];
-
-//Accomplishments
-let makeRed = false;
-let makeGreen = false;
-let makeBlue = false;
-let makeCyan = false;
-let makeMagenta = false;
-let makeYellow = false;
-let makeWhite = false;
-
-
+function accomplishmentsCheck (accomplishment) {
+  return accomplishment === true;
+  console.log(accomplishments.every(accomplishmentsCheck));
+}
 
 //Change the eye colours!
 function changeEyeColour (){
