@@ -124,15 +124,20 @@ function random (){
 const partyButton = document.querySelector('#party');
 partyButton.addEventListener('click', party);
 let partyMode = false;
+let partyInterval;
 
 function party (){
   if (partyMode === false) {
     partyMode = true;
-    setInterval(random, 100);
+    partyInterval = setInterval(random, 100);
     console.log(partyMode);
+    partyButton.innerHTML = 'STOP';
   }
-  if (partyMode === true) {
-    clearInterval(random);
+  else {
+    clearInterval(partyInterval);
+    partyMode = false; 
+    console.log(partyMode);
+    partyButton.innerHTML = 'PARTY!';
   }
 }
 

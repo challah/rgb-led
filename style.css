@@ -7,7 +7,7 @@ html {
 
 body {
   font-family: 'Space Mono', monospace;
-  margin: 2em;
+/*   margin: 2em; */
   font-size: 20px;
 }
 
@@ -165,7 +165,10 @@ button:active {
 }
 
 /* FOOTER ---------- */
-
+footer {
+  
+  
+}
 .gradient {
   background: -webkit-gradient(linear,left top,right top,from(red),to(green),to(blue));
   background: linear-gradient(to right,red,green,blue);
@@ -184,7 +187,7 @@ a:hover {
 }
 
 #extra > button {
-  height: 2em;
+  height: 20px;
   border-radius: 5px;
 }
 
