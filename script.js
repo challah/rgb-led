@@ -84,7 +84,27 @@ function updateColour (){
   redslider.value = red;
   greenslider.value = green;
   blueslider.value = blue;
+  if (red === 255 && green === 0 && blue === 0) {
+  makeRed = true;
+  console.log(makeRed);}
+  if (red === 0 && green === 255 && blue === 0) {
+  makeGreen = true;}
+  if (red === 0 && green === 0 && blue === 255) {
+  makeBlue = true;}
+  if (red === 0 && green === 255 && blue === 255) {
+  makeCyan = true;}
+  if (red === 255 && green === 0 && blue === 255) {
+  makeMagenta = true;}
+  if (red === 255 && green === 255 && blue === 0) {
+  makeYellow = true;}
+  if (red === 255 && green === 255 && blue === 255) {
+  makeWhite = true;}
+  // for (let i = 0; i < accomplishments.length, i ++) {
+  //   accomplishments[i] = true
+  // }
 }
+
+const accomplishments = [makeRed, makeGreen, makeBlue, makeCyan, makeMagenta, makeYellow, makeWhite];
 
 //Accomplishments
 let makeRed = false;
@@ -95,10 +115,7 @@ let makeMagenta = false;
 let makeYellow = false;
 let makeWhite = false;
 
-if (red === 255) {
-  makeRed = true;
-  console.log(makeRed);
-}
+
 
 //Change the eye colours!
 function changeEyeColour (){
