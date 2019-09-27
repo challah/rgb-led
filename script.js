@@ -27,12 +27,6 @@ let makeWhite = false;
 let achievements = [makeRed, makeGreen, makeBlue, makeCyan, makeMagenta, makeYellow, makeWhite];
 const stringyAchievements = ["makeRed", "makeGreen", "makeBlue", "makeCyan", "makeMagenta", "makeYellow", "makeWhite"];
 
-// console.log(stringyAchievements.toString());
-
-for (let i = 0; i < stringyAchievements.length; i ++) {
-  console.log((stringyAchievements[i].slice(4, stringyAchievements[i].length)).toLowerCase());
-}
-
 function makeAchievements() {
   for (let i = 0; i < achievements.length; i++) {
   let node = document.createElement("LI");                
@@ -44,27 +38,12 @@ function makeAchievements() {
 }
 makeAchievements();
 
-// function replace() {
-// // Create a new text node called "Water"
-// var textnode = document.createTextNode("YOU MADE RED!");
-
-// // Get the first child node of an <ul> element
-// var item = document.getElementById("achievements").childNodes[0];
-
-// // Replace the first child node of <ul> with the newly created text node
-// item.replaceChild(textnode, item.childNodes[0]);
-// };
-
-const nodesList = []
+const achievementsText = []
 for (let i = 0; i < achievements.length; i ++) {
   let lowercase = stringyAchievements[i].slice(4, stringyAchievements[i].length).toLowerCase()
   let text = `You made <span style='color:${lowercase}'>${lowercase}</span>!`;
-  nodesList.push(text)
+  achievementsText.push(text)
 }
-
-  console.log(nodesList)
-
-
 
 //Button inputs
 let colourDirection = '';
@@ -147,16 +126,31 @@ function updateColour (){
   if (red === 255 && green === 255 && blue === 0) {
   achievements[5] = true;}
   if (red === 255 && green === 255 && blue === 255) {
-  achievements[6] = true;}
-  
+  achievements[6] = true;}  
   replace();
-  // console.log(achievements) 
-  
-  //ni hao laoshi
-  // console.log(makeRed)
-  
-// accomplishmentsCheck();
 }
+
+//Check for Achievements
+const elementsList = []
+function replace () {
+for (let i=0; i < achievements.length; i++){  
+  let element = document.getElementById(stringyAchievements[i].toLowerCase())
+  elementsList.push(element)
+}   
+for (let i=0; i < achievements.length; i++){  
+  if (achievements[i] === true) {
+  elementsList[i].innerHTML = achievementsText[i];
+  console.log(achievementsText[i])
+} 
+}
+  let checker = arr => arr.every(v => v === true);
+  let showExtra = checker(achievements)
+  if (showExtra === true) {
+    document.querySelector('#extra').style.display = 'block';
+  }
+}
+
+//RANDOM & PARTY!!!
 const randomButton = document.querySelector('#random');
 randomButton.addEventListener('click', random);
 
@@ -187,15 +181,6 @@ function party (){
   }
 }
 
-
-// function accomplishmentsCheck (accomplishment) {
-//   return accomplishment === true;
-// }
-// console.log(accomplishments.every(accomplishmentsCheck));
-
-
-
-
 //Change the eye colours!
 function changeEyeColour (){
   eye[0].setAttribute('fill', `rgb(${red}, ${green}, ${blue})`);
@@ -204,28 +189,3 @@ function changeEyeColour (){
 }
 
 
-const elementsList = []
-function replace () {
-// var elmnt = document.createElement("li");
-// var textnode = document.createTextNode("You made RED!");
-// elmnt.appendChild(nodesList[0]);
-// var item = document.getElementById("makered");
-for (let i=0; i < achievements.length; i++){  
-  let element = document.getElementById(stringyAchievements[i].toLowerCase())
-  elementsList.push(element)
-}   
-for (let i=0; i < achievements.length; i++){  
-  // console.log(document.getElementById(stringyAchievements[i].toLowerCase()).innerHTML = nodesList[i])
-  // console.log(nodesList[i])
-  if (achievements[i] === true) {
-  // document.getElementById(stringyAchievements[i].toLowerCase()).innerHTML = nodesList[i];
-  elementsList[i].innerHTML = nodesList[i];
-  console.log(nodesList[i])
-} 
-}
-  let checker = arr => arr.every(v => v === true);
-  let showExtra = checker(achievements)
-  if (showExtra === true) {
-    document.querySelector('#extra').style.display = 'block';
-  }
-}
