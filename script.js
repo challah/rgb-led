@@ -107,12 +107,20 @@ function updateColour (){
   if (red === 255 && green === 255 && blue === 255) {
   makeWhite = true;}
   if (makeRed = true) {
-  console.log(`You made ${('' + makeRed).slice(0, 4)}`)
+  // console.log(`You made ${('' + makeRed).slice(0, 4)}`)
 }
 // accomplishmentsCheck();
 }
+const randomButton = document.querySelector('#random');
+randomButton.addEventListener('click', random);
 
-
+function random (){
+ red = Math.floor(Math.random() * 256);
+ green = Math.floor(Math.random() * 256);
+blue = green = Math.floor(Math.random() * 256);
+         changeEyeColour();
+       updateColour();
+}
 
 
 // function accomplishmentsCheck (accomplishment) {

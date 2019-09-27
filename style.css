@@ -147,7 +147,7 @@ button:active {
   height: 20px;
 }
 
-button {
+.red, .green, .blue {
   appearance: none;
   width: 25px;
   height: 25px;
@@ -176,6 +176,7 @@ button {
 a {
   text-decoration: none;
   font-style: italic;
+  border-bottom: 1px solid black;
 }
 
 a:hover {
