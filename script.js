@@ -126,8 +126,14 @@ partyButton.addEventListener('click', party);
 let partyMode = false;
 
 function party (){
-  if apsetInterval(random, 100);
-  partyMode = true;
+  if (partyMode === false) {
+    partyMode = true;
+    setInterval(random, 100);
+    console.log(partyMode);
+  }
+  if (partyMode === true) {
+    clearInterval(random);
+  }
 }
 
 
