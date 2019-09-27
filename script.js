@@ -33,17 +33,36 @@ for (let i = 0; i < stringyAchievements.length; i ++) {
   console.log((stringyAchievements[i].slice(4, stringyAchievements[i].length)).toLowerCase());
 }
 
-// function makeAchievements() {
-//   for (let i = 0; i < achievements.length; i++) {
-//   let node = document.createElement("LI");                
-//   let textnode = document.createTextNode("??????");
-//   node.appendChild(textnode);
-//   node.setAttribute('id', stringyAchievements[i].toLowerCase());
-//   document.querySelector("#achievements").appendChild(node);
-//   }
-// }
-// makeAchievements();
+function makeAchievements() {
+  for (let i = 0; i < achievements.length; i++) {
+  let node = document.createElement("LI");                
+  let textnode = document.createTextNode("??????");
+  node.appendChild(textnode);
+  node.setAttribute('id', stringyAchievements[i].toLowerCase());
+  document.querySelector("#achievements").appendChild(node);
+  }
+}
+makeAchievements();
 
+// function replace() {
+// // Create a new text node called "Water"
+// var textnode = document.createTextNode("YOU MADE RED!");
+
+// // Get the first child node of an <ul> element
+// var item = document.getElementById("achievements").childNodes[0];
+
+// // Replace the first child node of <ul> with the newly created text node
+// item.replaceChild(textnode, item.childNodes[0]);
+// };
+
+function replace () {
+    var textnode = document.createTextNode("D");
+    var item = document.getElementById("achievements").childNodes[0];
+    item.replaceChild(textnode,item.childNodes[0]);
+  
+}
+
+replace();
 
 
 //Button inputs
