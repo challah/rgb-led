@@ -93,7 +93,7 @@ function updateColour (){
   greenslider.value = green;
   blueslider.value = blue;
   if (red === 255 && green === 0 && blue === 0) {
-  makeRed = true;
+  makeRed = true;}
   if (red === 0 && green === 255 && blue === 0) {
   makeGreen = true;}
   if (red === 0 && green === 0 && blue === 255) {
@@ -106,14 +106,22 @@ function updateColour (){
   makeYellow = true;}
   if (red === 255 && green === 255 && blue === 255) {
   makeWhite = true;}
-  
-accomplishmentsCheck();
+  if (makeRed = true) {
+  console.log(`You made ${('' + makeRed).slice(0, 4)}`)
+}
+// accomplishmentsCheck();
 }
 
-function accomplishmentsCheck (accomplishment) {
-  return accomplishment === true;
-  console.log(accomplishments.every(accomplishmentsCheck));
-}
+
+
+
+// function accomplishmentsCheck (accomplishment) {
+//   return accomplishment === true;
+// }
+// console.log(accomplishments.every(accomplishmentsCheck));
+
+
+
 
 //Change the eye colours!
 function changeEyeColour (){
