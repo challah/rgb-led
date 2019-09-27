@@ -25,26 +25,33 @@ let makeMagenta = false;
 let makeYellow = false;
 let makeWhite = false;
 const achievements = [makeRed, makeGreen, makeBlue, makeCyan, makeMagenta, makeYellow, makeWhite];
+const stringyAchievements = ["makeRed", "makeGreen", "makeBlue", "makeCyan", "makeMagenta", "makeYellow", "makeWhite"];
+
+// console.log(stringyAchievements.toString());
+
+for (let i = 0; i < stringyAchievements.length; i ++) {
+  console.log((stringyAchievements[i].slice(4, stringyAchievements[i].length)).toLowerCase());
+}
 
 
 // let nameObject = {makeRed};
-for(let i = 0; i < achievements.length; i++) {
-let nameObject = achievements[i]
-let getVarNameFromObject = (nameObject) => {
-  for(let varName in nameObject) {
-    return varName;
-  }
-}
-let varName = getVarNameFromObject(nameObject);
-console.log(varName.slice(4, varName.length))
-}
+// for(let i = 0; i < achievements.length; i++) {
+// let nameObject = achievements[i]
+// let getVarNameFromObject = (nameObject) => {
+//   for(let varName in nameObject) {
+//     return varName;
+//   }
+// }
+// let varName = getVarNameFromObject(nameObject);
+// console.log(varName.slice(4, varName.length))
+// }
 
 function makeAchievements() {
   for (let i = 0; i < achievements.length; i++) {
   let node = document.createElement("LI");                
   let textnode = document.createTextNode("??????");
   node.appendChild(textnode);
-  // node.setAttribute('id', achievements[i])
+  node.setAttribute('id', stringyAchievements[i].toLowerCase());
   document.querySelector("#achievements").appendChild(node);
   }
 }
