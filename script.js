@@ -30,7 +30,7 @@ const stringyAchievements = ["makeRed", "makeGreen", "makeBlue", "makeCyan", "ma
 function makeAchievements() {
   for (let i = 0; i < achievements.length; i++) {
   let node = document.createElement("LI");                
-  let textnode = document.createTextNode("☐ ??????");
+  let textnode = document.createTextNode("☐ ????????????");
   node.appendChild(textnode);
   node.setAttribute('id', stringyAchievements[i].toLowerCase());
   document.querySelector("#achievements").appendChild(node);

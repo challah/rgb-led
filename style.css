@@ -36,9 +36,9 @@ ul {
   text-align: left;
   list-style-position: inside;
   position: relative;
-/*   left: 70px; */
   padding: 0;
   column-count: 2;
+  margin: auto;
 }
 
 li:before {
@@ -53,7 +53,6 @@ li:before {
   text-align: center;
   width: 500px;
 /*   min-width: 400px; */
-/*   height: 30vh; */
   margin: auto;
   padding-top: 20px;
   padding-left: 0pt;
@@ -308,6 +307,7 @@ animation:rainbow 1s infinite;
    column-count: 1;
      width: 60vw;
     margin: auto;
+    left: 70px;
   }
   h1 {
     font-size: 3em;
