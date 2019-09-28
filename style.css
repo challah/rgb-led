@@ -32,17 +32,18 @@ h1 {
 }
 
 ul {
-/*   list-style-type: none; */
+  list-style-type: none;
   text-align: left;
   list-style-position: inside;
   position: relative;
-  left: -20px;
+/*   left: 70px; */
+  padding: 0;
   column-count: 2;
 }
 
 li:before {
-  content: "☐ ";
-  text-align: left;
+/*   content: "☐ "; */
+/*   text-align: left; */
 }
 
 #achievements-cont {
@@ -50,8 +51,8 @@ li:before {
    flex-direction: column;
 /*   width: 200px; */
   text-align: center;
-  width: 40vw;
-  min-width: 400px;
+  width: 500px;
+/*   min-width: 400px; */
 /*   height: 30vh; */
   margin: auto;
   padding-top: 20px;
@@ -305,8 +306,14 @@ animation:rainbow 1s infinite;
 @media (max-width: 768px) {
   ul {
    column-count: 1;
+     width: 60vw;
+    margin: auto;
   }
   h1 {
     font-size: 3em;
   }
+  #achievements-cont {
+width: 90vw;
+ 
+ 
 }
