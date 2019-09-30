@@ -144,6 +144,7 @@ for (let i=0; i < achievements.length; i++){
   console.log(achievementsText[i])
 } 
 }
+ //if all the achievements are achieved, unlock extras! 
   let checker = arr => arr.every(v => v === true);
   let showExtra = checker(achievements)
   if (showExtra === true) {
